@@ -37,6 +37,29 @@ if (function_exists('add_theme_support'))
 	'admin-head-callback'		=> $adminhead_cb,
 	'admin-preview-callback'	=> $adminpreview_cb
     ));*/
+    
+    // Custom Header
+    /*$defaults = array(
+        'default-image'          => '',
+        'random-default'         => false,
+        'width'                  => 0,
+        'height'                 => 0,
+        'flex-height'            => false,
+        'flex-width'             => false,
+        'default-text-color'     => '',
+        'header-text'            => true,
+        'uploads'                => true,
+        'wp-head-callback'       => '',
+        'admin-head-callback'    => '',
+        'admin-preview-callback' => '',
+    );
+    add_theme_support( 'custom-header', $defaults ); */
+    
+    // Post Formats
+    add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
+    
+    // Title Tag
+    /*add_theme_support( 'title-tag' );*/
 }
 
 /*-------------------------------------------------------------------------------
