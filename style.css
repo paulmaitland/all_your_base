@@ -6,3 +6,39 @@
 	Author: Bay12 Design (@bay12design)
 	Author URI: http://www.bay12design.com
 */
+
+/*-------------------------------------------------------------------------------
+	Generic Styles
+-------------------------------------------------------------------------------*/
+
+html {
+    overflow-y:scroll;
+    height:100%;
+}
+
+*, 
+*:after, 
+*:before {
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+}
+
+img {
+    max-width:100%;
+    vertical-align:bottom;
+}
+
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+
+.clear {
+    *zoom:1;
+}
