@@ -69,11 +69,7 @@ function load_scripts()
     if (!is_admin()) {
 
     wp_deregister_script('jquery'); // Deregister WordPress jQuery
-    wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.0', true); // Google CDN jQuery
-    wp_enqueue_script('jquery');
-        
-	// Uses Bootstrap jQuery supplied by MaxCDN	- requires Jquery be loaded first
-	wp_register_script('boostrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js', array('jquery'), '3.3.2', true); // Google CDN jQuery
+    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', array(), '1.9.1', true); // Google CDN jQuery
     wp_enqueue_script('jquery'); 
     
     wp_register_script('themescripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '1.0.0',true); // Custom scripts
@@ -92,7 +88,7 @@ function conditional_scripts()
 {
     if (is_page('pagenamehere')) {
         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-        wp_enqueue_script('scriptname');
+        wp_enqueue_script('scriptname'); 
     }
 }
 add_action('wp_print_scripts', 'conditional_scripts');
@@ -104,13 +100,7 @@ add_action('wp_print_scripts', 'conditional_scripts');
 function theme_styles()
 {
     wp_register_style('defaultstyles', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-    wp_enqueue_style('defaultstyles');
-    // Uses Bootstrap CSS supplied by MaxCDN
-	wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css', array(), '3.3.2', 'all');
-    wp_enqueue_style('bootstrap');
-    // Uses Bootstrap CSS supplied by MaxCDN - requires Bootstrap be loaded first
-	wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array('bootstrap'), '4.3.0', 'all');
-    wp_enqueue_style('font-awesome');
+    wp_enqueue_style('defaultstyles'); // Enqueue it!
 }
 add_action('wp_enqueue_scripts', 'theme_styles');
 
@@ -216,7 +206,7 @@ add_action( 'admin_head', 'add_menu_icons_styles' );
 	Custom Post Types
 -------------------------------------------------------------------------------*/
 
- /* function custom_post_type() {
+/* function custom_post_type() {
 
 	$labels = array(
 		'name'                => 'CUSTOM_POST',
