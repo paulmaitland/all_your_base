@@ -44,7 +44,7 @@ img {
 }
 
 /*-------------------------------------------------------------------------------
-	Generic Styles
+	Wordpress Core Styles
 -------------------------------------------------------------------------------*/
 
 .alignnone {
@@ -129,10 +129,10 @@ a img.aligncenter {
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { }
+@media (min-width: 768px) { }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { }
+@media (min-width: 992px) { }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { }
+@media (min-width: 1200px) { }
