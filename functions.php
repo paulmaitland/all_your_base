@@ -125,7 +125,7 @@ add_action('wp_print_scripts', 'conditional_scripts');
 
 function theme_styles()
 {
-    wp_register_style('theme', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_register_style('theme', get_template_directory_uri() . '/style.css', array('bootstrap','fontawesome'), '1.0', 'all');
     wp_enqueue_style('theme');
 	wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', array(), '3.3.4', 'all');
     wp_enqueue_style('bootstrap'); 
