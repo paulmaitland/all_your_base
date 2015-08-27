@@ -8,8 +8,8 @@
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
         
         <!-- meta -->
+        	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
     
         <!-- icons -->
 		<link href="<?php echo get_template_directory_uri(); ?>/images/icons/favicon.ico" rel="shortcut icon">
@@ -18,8 +18,8 @@
         <!-- css + javascript -->
         <?php wp_head(); ?>
         <!--[if lt IE 9]>
-			<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
-		<![endif]-->
+		<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
+	<![endif]-->
     
     </head>
     <body <?php body_class();?>>
