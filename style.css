@@ -125,14 +125,17 @@ a img.aligncenter {
 	Bootstrap Media Queries
 -------------------------------------------------------------------------------*/
 
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+/* Extra Small Devices - Portrait Phones (<34em) */ 
+@media (max-width: 34em) { }
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { }
+/* Small Devices - Landscape Phones (>34em) */ 
+@media (min-width: 34em) { }
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { }
+/* Medium Devices - Tablets (>48em) */ 
+@media (min-width: 48em) { }
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { }
+/* Large Devices - Desktops (>62em) */ 
+@media (min-width: 62em) { }
+
+/* Extra Large Devices - Desktops (>72em) */ 
+@media (min-width: 75em) { }
