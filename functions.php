@@ -95,7 +95,7 @@ function load_scripts()
     wp_register_script('jquery', '//code.jquery.com/jquery-1.11.2.min.js', array(), '1.11.2', true); 
     wp_enqueue_script('jquery'); 
 
-	wp_register_script('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), '3.3.4',true); 
+    wp_register_script('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js', array('jquery'), '4.0.0',true); 
     wp_enqueue_script('bootstrap');
     
     wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0',true); 
@@ -127,7 +127,7 @@ function theme_styles()
 {
     wp_register_style('theme', get_template_directory_uri() . '/style.css', array('bootstrap','fontawesome'), '1.0', 'all');
     wp_enqueue_style('theme');
-	wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', array(), '3.3.4', 'all');
+	wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css', array(), '4.0.0', 'all');
     wp_enqueue_style('bootstrap'); 
 	wp_register_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array('bootstrap'), '4.3.0', 'all');
     wp_enqueue_style('fontawesome');
