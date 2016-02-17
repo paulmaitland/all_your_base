@@ -290,4 +290,13 @@ add_action( 'admin_head', 'add_menu_icons_styles' );
 // Hook into the 'init' action
 add_action( 'init', 'custom_post_type', 0 ); */
 
+/*-------------------------------------------------------------------------------
+	Stop images being wrapped in <p> tags 
+-------------------------------------------------------------------------------*/
+
+function wpfme_remove_img_ptags($content){
+	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+add_filter('the_content', 'wpfme_remove_img_ptags');
+
 ?>
