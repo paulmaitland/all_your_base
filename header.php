@@ -36,36 +36,3 @@
     <nav role="navigation">
         <?php wp_nav_menu();?>
     </nav>
-
-
-
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h6>Contact</h6>
-                </div>
-                <div class="contact">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>183A Moulsham Street. Chelmsford. Essex. CM2 0LG</p>
-                        </div>
-                        <div class="contact1">
-                            <div class="col-md-6">
-                                <p>MOB: 07989 633363. TEL: 01245 283289. Ask for Emma James</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <small>&copy; 2016, Beauty by Emma.</small>
-                        <small>Website Design by <a href="#">Hall &amp; Co.</a></small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
