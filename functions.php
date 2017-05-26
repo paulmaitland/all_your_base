@@ -92,13 +92,16 @@ function load_scripts()
     if (!is_admin()) {
 
     wp_deregister_script('jquery');
-    wp_register_script('jquery', '//code.jquery.com/jquery-1.11.2.min.js', array(), '1.11.2', true); 
+    wp_register_script('jquery', 'code.jquery.com/jquery-3.1.1.slim.min.js', array(), '3.1.1', true); 
     wp_enqueue_script('jquery'); 
 
-    wp_register_script('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'), '3.3.6',true); 
-    wp_enqueue_script('bootstrap');
+    wp_register_script('tether', 'cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', array('jquery'), '1.4.0',true); 
+    wp_enqueue_script('tether'); 
+	    
+	wp_register_script('bootstrap', 'maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', array('jquery','tether'), '4.0.0',true); 
+    wp_enqueue_script('bootstrap'); 
     
-    wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0',true); 
+    wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery','bootstrap'), '1.0.0',true); 
     wp_enqueue_script('scripts'); 
     
     }
@@ -125,9 +128,9 @@ add_action('wp_print_scripts', 'conditional_scripts');
 
 function theme_styles()
 {
-	wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', array(), '3.3.6', 'all');
+	wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', array(), '4.0.0', 'all');
     wp_enqueue_style('bootstrap'); 
-	wp_register_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array('bootstrap'), '4.5.0', 'all');
+	wp_register_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array('bootstrap'), '4.7.0', 'all');
     wp_enqueue_style('fontawesome');
 	wp_register_style('theme', get_template_directory_uri() . '/style.css', array('bootstrap','fontawesome'), '1.0', 'all');
     wp_enqueue_style('theme');
